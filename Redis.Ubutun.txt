@@ -1,0 +1,96 @@
+	sudo apt-get update
+	sudo apt-get install make
+	sudo apt-get install gcc
+
+
+	sudo apt-get update 
+	sudo apt-get install build-essential tcl
+	sudo apt-get install libjemalloc-dev  (Optional)
+	
+Trên mỗi node:
+
+	curl -O http://download.redis.io/redis-stable.tar.gz
+	tar xzvf redis-stable.tar.gz
+	cd redis-stable
+	make
+	make test
+	sudo make install
+
+
+* Now in the redis directory you should be able 
+to see both redis.conf and sentinel.conf configuration files:
+
+	- Config redis master node:
+
+# nano master.conf
+
+bind 10.103.1.150
+protected-mode no
+port 1000
+daemonize yes
+pidfile "redis-master.pid"
+loglevel notice
+logfile "master.log"
+databases 16
+daemonize yes
+	
+	- Config redis slave1.conf nodes:
+
+# nano slave1.conf
+
+bind 10.103.1.150	
+protected-mode no
+port 1001
+daemonize yes
+pidfile “redis-slave1.pid”
+loglevel notice
+logfile "slave1.log"
+databases 16
+daemonize yes
+slaveof 10.103.1.150 1000	
+	
+# nano slave2.conf
+
+bind 10.103.1.150	
+protected-mode no
+port 1002
+daemonize yes
+pidfile “redis-slave2.pid”
+loglevel notice
+logfile "slave2.log"
+databases 16
+daemonize yes
+slaveof 10.103.1.150 1000
+	
+	
+sudo ufw allow 1000
+sudo ufw allow 1001
+sudo ufw allow 1002	
+	
+	sudo ufw allow 5000
+	sudo ufw allow 26379
+	
+Start Redis-server process:
+	
+	./redis-server redis-test.conf
+	./redis-server master.conf
+	./redis-server slave1.conf
+	./redis-server slave2.conf
+	
+khi đó, check trên master node:
+	127.0.0.1:6379> info replication
+
+echo 'vm.overcommit_memory = 1' >> /etc/sysctl.conf
+
+nano /etc/sysctl.conf
+
+sudo sysctl -p /etc/sysctl.conf
+ 
+lsb_release -d
+
+sudo lsof -i -P -n | grep LISTEN
+netstat -tanp
+lsof -i | grep ftp
+killall -i redis-ser
+kill PID
+
