@@ -1,0 +1,6 @@
+C:\Pdf\TestPdfium\TestPdfium\obj\Debug\TestPdfium.csprojAssemblyReference.cache
+C:\Pdf\TestPdfium\TestPdfium\obj\Debug\TestPdfium.csproj.CoreCompileInputs.cache
+C:\Pdf\TestPdfium\TestPdfium\bin\Debug\TestPdfium.exe
+C:\Pdf\TestPdfium\TestPdfium\bin\Debug\TestPdfium.pdb
+C:\Pdf\TestPdfium\TestPdfium\obj\Debug\TestPdfium.exe
+C:\Pdf\TestPdfium\TestPdfium\obj\Debug\TestPdfium.pdb

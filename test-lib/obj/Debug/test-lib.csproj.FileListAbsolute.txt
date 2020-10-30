@@ -1,0 +1,9 @@
+C:\Pdf\TestPdfium\test-lib\bin\Debug\test-lib.exe
+C:\Pdf\TestPdfium\test-lib\bin\Debug\test-lib.pdb
+C:\Pdf\TestPdfium\test-lib\obj\Debug\test-lib.csprojAssemblyReference.cache
+C:\Pdf\TestPdfium\test-lib\obj\Debug\test-lib.csproj.CoreCompileInputs.cache
+C:\Pdf\TestPdfium\test-lib\obj\Debug\test-lib.csproj.CopyComplete
+C:\Pdf\TestPdfium\test-lib\obj\Debug\test-lib.exe
+C:\Pdf\TestPdfium\test-lib\obj\Debug\test-lib.pdb
+C:\Pdf\TestPdfium\test-lib\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Pdf\TestPdfium\test-lib\bin\Debug\iTextSharp.dll
